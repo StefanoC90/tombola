@@ -2,8 +2,8 @@ import java.awt.*;
 
 class  Tombola{
 public static Frame f=new Frame("  TOMBOLA  ");    
-public static tab t=new tab();
-public static sacco s=new sacco();
+public static Tab t=new Tab();
+public static Sacco s=new Sacco();
 
 	public static void main(String argv[]) {
 	         
@@ -13,7 +13,7 @@ public static sacco s=new sacco();
 	     f.setLocation(400,300);	
 	     f.setVisible(true);	    
 	     f.addWindowListener(new GestoreFinestra());
-	     t.addMouseListener(new mou());
+	     t.addMouseListener(new Mou());
 	  
 	}
 }

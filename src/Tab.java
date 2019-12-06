@@ -1,11 +1,11 @@
 import java.awt.*; 
 
-public class tab extends  Canvas {
-    
-    int cont=0; 
+public class Tab extends  Canvas {
+
+
+    private final String NUMBERSTRING = "L'ultimo numero estratto e': ";
+    int cont=0;
     public void paint(Graphics g){
-	    Font car1=new Font("Monospaced",Font.PLAIN,12);
-	    Font car2=new Font("Monospaced",Font.PLAIN,16);
 	    int i=0,j=0,s1=0,s2=0,n;
 	    cont++;
 	    
@@ -13,7 +13,7 @@ public class tab extends  Canvas {
 	    	System.exit(0);
 	
 	    
-	    g.setFont(car1); 
+	    g.setFont(new Font(Font.MONOSPACED, Font.PLAIN,12));
 	    g.setColor(Color.gray);	
 	    g.fillRect(0,0,445,480);
 	    g.setColor(Color.black);
@@ -52,7 +52,7 @@ public class tab extends  Canvas {
 			    	s1=10;		
 			    	
 			
-			    if(Tombola.s.a[n]==false){
+			    if(Sacco.getA()[n]==false){
 			    
 			    	g.setColor(Color.white); 
 			    } 
@@ -68,12 +68,12 @@ public class tab extends  Canvas {
 			    n++;
 		    }
 	    }
-	    if(sacco.es!=0){
+	    if(Sacco.getEs()!=0){
 	    
 		    g.setColor(Color.black);
-		    g.setFont(car2); 
-		    g.drawString("L'ultimo numero estratto e': "+sacco.es,15,460);
-		    g.drawString("L'ultimo numero estratto e': "+sacco.es,0,0);
+		    g.setFont(new Font(Font.MONOSPACED, Font.PLAIN,16));
+		    g.drawString(NUMBERSTRING + Sacco.getEs(),15,460);
+		    g.drawString(NUMBERSTRING + Sacco.getEs(),0,0);
 		    
 		    
 	    }
